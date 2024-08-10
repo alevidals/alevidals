@@ -1,7 +1,4 @@
-<div align="center">
-  <img src="./assets/profile.jpeg" alt="profile" width="200" style="border-radius: 100px;" />
   <h1 style="border-bottom: none; margin-top: 10px;">Hey! I'm Alejandro 👋</h1>
-</div>
 
 <p>
 I'm a software developer with over 4 years of coding experience, including 2+ years of professional work in web development. I'm always eager to learn and grow, and I'm open to new opportunities that allow me to expand my skills and knowledge.
