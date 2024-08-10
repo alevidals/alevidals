@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="./assets/profile.jpeg" alt="profile" width="200" style="border-radius: 50%;" />
+  <img src="./assets/profile.jpeg" alt="profile" width="200" style="border-radius: 100px;" />
   <h1 style="border-bottom: none; margin-top: 10px;">Hey! I'm Alejandro 👋</h1>
 </div>
 
