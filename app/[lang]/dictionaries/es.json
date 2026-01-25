@@ -1,4 +1,8 @@
 {
+  "siteConfig": {
+    "title": "Alejandro Vidal - Desarrollador Frontend",
+    "description": "Portafolio de Alejandro Vidal, desarrollador frontend especializado en React y Next.js."
+  },
   "header": {
     "experiences": "Experiencias",
     "projects": "Proyectos",

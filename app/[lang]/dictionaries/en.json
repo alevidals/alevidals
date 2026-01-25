@@ -1,4 +1,8 @@
 {
+  "siteConfig": {
+    "title": "Alejandro Vidal - Frontend Developer",
+    "description": "Portfolio of Alejandro Vidal, a frontend developer specialized in React and Next.js."
+  },
   "header": {
     "experiences": "Experience",
     "projects": "Projects",
