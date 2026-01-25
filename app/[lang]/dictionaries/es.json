@@ -1,0 +1,34 @@
+{
+  "header": {
+    "experiences": "Experiencias",
+    "projects": "Proyectos",
+    "about": "Sobre mí"
+  },
+  "me": {
+    "title": "Hola, soy Alejandro",
+    "subtitle": "Desarrollador Frontend",
+    "description": "Construyo experiencias web modernas, accesibles y de alto rendimiento utilizando React y Next.js.",
+    "downloadCV": "Descargar CV",
+    "contactMe": "Contáctame"
+  },
+  "experiences": {
+    "title": "Experiencias",
+    "present": "Presente",
+    "idealistaDescription": "Colaboré con el equipo en el desarrollo desde cero del nuevo chat de Idealista para usuarios no profesionales, mejorando tanto la experiencia de usuario como la escalabilidad del sistema. También participé en la fase final de la renovación del chat para usuarios profesionales, asegurando alta calidad y funcionalidad óptima. Además, diseñé y desarrollé dos herramientas reutilizables para ambos sistemas de chat: un cargador de medios eficiente y una galería de imágenes integrada, mejorando la gestión y visualización de contenido. A lo largo del proyecto, definí y gestioné tareas dentro del equipo para optimizar el flujo de trabajo y la coordinación.",
+    "aktiosDescription": "Tengo experiencia desarrollando una variedad de proyectos, desde plataformas web hasta aplicaciones móviles. Contribuí a una plataforma de venta de billetes de ferry en línea que integra múltiples compañías, permitiendo a los usuarios comparar precios y elegir la opción más económica, trabajando de cerca con el tech lead en decisiones clave de arquitectura para garantizar escalabilidad y mantenibilidad. He implementado flujos de autenticación en varios proyectos y reconstruido por completo el backend de una aplicación, cubriendo desde el modelado de datos y la arquitectura hasta la implementación final. Además, desarrollé un panel para visualizar el consumo eléctrico mediante gráficos interactivos y pantallas para una aplicación móvil utilizando Expo (React Native)."
+  },
+  "projects": {
+    "title": "Proyectos",
+    "intolerantiaDescription": "Una aplicación web que utiliza inteligencia artificial para ayudar a los usuarios a identificar intolerancias alimentarias en función de sus síntomas. IntolerantIA es una app en la que podrás echar un vistazo rápido al menú de un restaurante para ver qué alimentos puedes y no puedes comer. Es especialmente útil para personas con alergias e intolerancias.",
+    "myportfolioDescription": "MyPortfolio es una aplicación web que permite a desarrolladores y profesionales del sector tecnológico crear su propio portfolio y currículum de forma rápida y sencilla, utilizando su cuenta de GitHub para registrarse.",
+    "loopDescription": "Tienda online creada para practicar utilizando Next.js, Stripe y Turso.",
+    "planetManagementSystemDescription": "Un sistema de gestión de planetas basado en Star Wars, creado con Next.js y Zustand."
+  },
+  "aboutMe": {
+    "title": "Sobre mí",
+    "text": "Hola, soy Alejandro 👋. Además de ser un apasionado de la programación, me encanta mantenerme activo y disfrutar del aire libre. Me puedes encontrar montando en skate, practicando snowboard, yendo al gimnasio o jugando al pádel de vez en cuando. También soy un amante de los videojuegos, los viajes y las escapadas a la montaña, donde encuentro la combinación perfecta entre aventura y desconexión."
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados."
+  }
+}

@@ -1,0 +1,15 @@
+commit_msg_file="$1"
+commit_msg="$(sed -n '1p' "$commit_msg_file")"
+
+pattern='^(feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert)(\([a-z0-9_\-\/ ]+\))?(!)?: .+'
+
+if echo "$commit_msg" | grep -Eq "$pattern"; then
+  exit 0
+else
+  echo "Error: El mensaje de commit no sigue Conventional Commits." >&2
+  echo "Formato esperado: tipo(scope)?: descripción" >&2
+  echo "Tipos permitidos: feat, fix, docs, style, refactor, perf, test, build, ci, chore, revert" >&2
+  echo "Ejemplo: feat(auth): añadir login con magic link" >&2
+  echo "Más información: https://www.conventionalcommits.org/en/v1.0.0/" >&2
+  exit 1
+fi

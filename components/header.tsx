@@ -1,31 +1,27 @@
-import Link from "next/link";
+import type { getDictionary } from "@/app/[lang]/dictionaries";
 import { LangSwitcher } from "@/components/lang-switcher";
+import { Navbar } from "@/components/navbar";
 import { ThemeSwitcher } from "@/components/theme-switcher";
-import { Button } from "@/components/ui/button";
+import type { NavLink } from "@/lib/types";
 
-type NavLink = {
-  label: string;
-  href: string;
+type Props = {
+  dict: Awaited<ReturnType<typeof getDictionary>>["header"];
 };
 
-const LINKS: NavLink[] = [
-  { label: "Experiences", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "About", href: "#about" },
-];
+export function Header({ dict }: Props) {
+  const LINKS: NavLink[] = [
+    { label: dict.experiences, href: "#experience" },
+    { label: dict.projects, href: "#projects" },
+    { label: dict.about, href: "#about" },
+  ];
 
-export function Header() {
   return (
     <header className="flex items-center justify-between">
-      <LangSwitcher />
-      <nav className="h-11 px-4 border dark:border-input rounded-md flex items-center bg-background shadow-xs dark:bg-input/30">
-        {LINKS.map((link) => (
-          <Button key={link.href} variant="ghost" asChild>
-            <Link href={link.href}>{link.label}</Link>
-          </Button>
-        ))}
-      </nav>
-      <ThemeSwitcher />
+      <Navbar links={LINKS} />
+      <div className="flex items-center gap-4">
+        <LangSwitcher />
+        <ThemeSwitcher />
+      </div>
     </header>
   );
 }

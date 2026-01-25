@@ -5,7 +5,12 @@ import {
 } from "@tabler/icons-react";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import type { getDictionary } from "@/app/[lang]/dictionaries";
 import { Button } from "@/components/ui/button";
+
+type Props = {
+  dict: Awaited<ReturnType<typeof getDictionary>>["me"];
+};
 
 type Social = {
   name: string;
@@ -31,24 +36,32 @@ const SOCIALS: Social[] = [
   },
 ];
 
-export function MeSection() {
+export async function MeSection({ dict }: Props) {
   return (
-    <section className="mt-32">
-      <h1 className="text-6xl font-bold">Hello, I'm Alejandro</h1>
-      <h2 className="text-5xl text-muted-foreground">Frontend Developer</h2>
-      <p className="mt-6 text-xl text-muted-foreground max-w-prose">
-        Welcome to my personal website where I share my projects and blog posts
-        about web development.
+    <section className="mt-10 md:mt-32">
+      <h1 className="text-3xl font-bold bg-linear-to-b from-neutral-200 to-neutral-500 bg-clip-text text-transparent md:text-7xl">
+        {dict.title}
+      </h1>
+      <h2 className="text-xl md:text-5xl bg-linear-to-b from-neutral-200 to-neutral-500 bg-clip-text font-bold text-transparent">
+        {dict.subtitle}
+      </h2>
+      <p className="mt-6 text-lg md:text-xl text-muted-foreground max-w-prose">
+        {dict.description}
       </p>
       <div className="mt-10">
         <Button
           size="lg"
-          className="shadow-xl shadow-primary/20 hover:shadow-primary/40 transition-shadow duration-500 h-12"
+          className="transition-shadow duration-500 h-12"
+          asChild
         >
-          Download resume
+          <a href="/CV - Alejandro Vidal Sánchez.pdf" download>
+            {dict.downloadCV}
+          </a>
         </Button>
-        <Button size="lg" variant="outline" className="ml-4 h-12">
-          Contact me
+        <Button size="lg" variant="outline" className="ml-4 h-12" asChild>
+          <Link href="mailto:alejandro.vidal.sanchez16@gmail.com">
+            {dict.contactMe}
+          </Link>
         </Button>
       </div>
       <div className="mt-6 flex gap-4">
