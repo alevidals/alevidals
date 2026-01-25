@@ -35,5 +35,5 @@ function getLocaleFromBrowser(request: NextRequest): Locale {
 }
 
 export const config = {
-  matcher: ["/((?!(?:es|en)(?:/|$)|_next|api|public|static|\\.).*)"],
+  matcher: ["/((?!(?:es|en)(?:/|$)|_next/|api/|public/|.*\\..*?).*)"],
 };
