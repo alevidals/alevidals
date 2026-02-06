@@ -23,6 +23,7 @@
   },
   "projects": {
     "title": "Proyectos",
+    "omnistockDescription": "OmniStock es una plataforma para la gestión de inventarios pensada para negocios de todo tamaño: desde tiendas y talleres hasta bibliotecas o servicios de alquiler. Integra control de stock consumible, gestión de préstamos, trazabilidad y alertas inteligentes en una única interfaz.",
     "intolerantiaDescription": "Una aplicación web que utiliza inteligencia artificial para ayudar a los usuarios a identificar intolerancias alimentarias en función de sus síntomas. IntolerantIA es una app en la que podrás echar un vistazo rápido al menú de un restaurante para ver qué alimentos puedes y no puedes comer. Es especialmente útil para personas con alergias e intolerancias.",
     "myportfolioDescription": "MyPortfolio es una aplicación web que permite a desarrolladores y profesionales del sector tecnológico crear su propio portfolio y currículum de forma rápida y sencilla, utilizando su cuenta de GitHub para registrarse.",
     "loopDescription": "Tienda online creada para practicar utilizando Next.js, Stripe y Turso.",

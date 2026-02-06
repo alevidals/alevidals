@@ -2,6 +2,7 @@ import {
   IconChefHat,
   IconExternalLink,
   IconFileCv,
+  IconPackage,
   IconPlanet,
   IconShoppingBag,
   IconSourceCode,
@@ -27,6 +28,27 @@ type Project = {
 
 export function ProjectsSection({ dict }: Props) {
   const PROJECTS: Project[] = [
+    {
+      title: "Omnistock",
+      description: dict.omnistockDescription,
+      link: "https://omnistock-chi.vercel.app",
+      icon: <IconPackage className="size-8 text-background" />,
+      repoUrl: "https://github.com/alevidals/omnistock",
+      technologies: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "Shadcn UI",
+        "Zod",
+        "Drizzle ORM",
+        "LibSQL",
+        "Better Auth",
+        "Framer Motion",
+        "Biome",
+        "Husky",
+      ],
+    },
     {
       title: "intolerantIA",
       description: dict.intolerantiaDescription,
