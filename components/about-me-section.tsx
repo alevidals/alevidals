@@ -1,5 +1,6 @@
 import Image from "next/image";
 import type { getDictionary } from "@/app/[lang]/dictionaries";
+import { GalleryCarousel } from "@/components/gallery-carousel";
 
 type Props = {
   dict: Awaited<ReturnType<typeof getDictionary>>["aboutMe"];
@@ -20,7 +21,12 @@ export function AboutMeSection({ dict }: Props) {
       <p className="mt-10 text-muted-foreground max-w-[80ch] text-lg">
         {dict.text}
       </p>
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-10">
+
+      <div className="mt-10 sm:hidden">
+        <GalleryCarousel images={images} />
+      </div>
+
+      <div className="hidden sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-10 sm:block">
         {images.map((img) => (
           <div key={img.id} className="mb-4 break-inside-avoid">
             <Image
