@@ -1,6 +1,5 @@
-import Image from "next/image";
 import type { getDictionary } from "@/app/[lang]/dictionaries";
-import { Badge } from "@/components/ui/badge";
+import { ExperienceCard } from "@/components/experience-card";
 
 type Props = {
   dict: Awaited<ReturnType<typeof getDictionary>>["experiences"];
@@ -41,30 +40,18 @@ export function ExperiencesSection({ dict }: Props) {
       </div>
       <div className="mt-10 flex flex-col gap-8">
         {EXPERIENCES.map((exp) => (
-          <div
+          <ExperienceCard
             key={exp.companyName}
-            className="flex items-center gap-6 p-6 rounded-lg border backdrop-blur-[2px]"
-          >
-            <Image
-              src={exp.imageUrl}
-              alt={exp.companyName}
-              height={50}
-              width={50}
-              className="rounded-lg self-start"
-            />
-            <div className="flex-1">
-              <div className="flex items-center justify-between">
-                <h4 className="text-xl font-semibold">{exp.role}</h4>
-                <Badge variant="secondary">
-                  {exp.startDate} - {exp.endDate ?? dict.present}
-                </Badge>
-              </div>
-              <p className="text-muted-foreground">{exp.companyName}</p>
-              <p className="mt-2 text-muted-foreground max-w-[80ch]">
-                {exp.description}
-              </p>
-            </div>
-          </div>
+            companyName={exp.companyName}
+            role={exp.role}
+            description={exp.description}
+            startDate={exp.startDate}
+            endDate={exp.endDate}
+            imageUrl={exp.imageUrl}
+            presentLabel={dict.present}
+            readMoreLabel={dict.readMore}
+            readLessLabel={dict.readLess}
+          />
         ))}
       </div>
     </section>
