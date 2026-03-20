@@ -23,6 +23,13 @@ export async function generateMetadata({
   const { lang } = await params;
   const dict = await getDictionary(lang as Locale);
 
+  const ogImage = {
+    url: "/opengraph-image.png",
+    width: 1200,
+    height: 630,
+    alt: `${dict.siteConfig.title} - ${dict.siteConfig.description}`,
+  };
+
   return {
     title: dict.siteConfig.title,
     description: dict.siteConfig.description,
@@ -37,6 +44,17 @@ export async function generateMetadata({
     ],
     authors: [{ name: "Alejandro Vidal", url: "" }],
     creator: "Alejandro Vidal",
+    openGraph: {
+      title: dict.siteConfig.title,
+      description: dict.siteConfig.description,
+      images: [ogImage],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: dict.siteConfig.title,
+      description: dict.siteConfig.description,
+      images: [ogImage],
+    },
   };
 }
 
