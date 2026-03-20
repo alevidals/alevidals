@@ -1,24 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { getDictionary, type Locale } from "@/app/[lang]/dictionaries";
-import { BackToTopButton } from "@/components/back-top-top-button";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { ThemeProvider } from "@/components/theme-provider";
-import { GridBackground } from "@/components/ui/grid-background";
 
 type Params = Promise<{
   lang: string;
 }>;
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
@@ -54,26 +47,17 @@ type Props = {
 
 export default async function RootLayout({ children, params }: Props) {
   const { lang } = await params;
-  const dict = await getDictionary(lang as Locale);
 
   return (
     <html lang={lang} suppressHydrationWarning className="scroll-smooth">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <GridBackground />
-        <div className="max-w-5xl mx-auto flex flex-col min-h-screen w-full z-10 relative px-6">
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="flex-1">
-              <div className="py-6">
-                <Header dict={dict.header} />
-                {children}
-              </div>
-              <Footer dict={dict.footer} />
-            </div>
-          </ThemeProvider>
-        </div>
-        <BackToTopButton />
+      <body className={`${inter.variable} font-sans min-h-screen antialiased`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <main className="relative mx-auto flex min-h-screen max-w-4xl flex-col px-6 py-4 md:py-6">
+            <Header />
+            <div className="flex-1">{children}</div>
+            <Footer />
+          </main>
+        </ThemeProvider>
       </body>
     </html>
   );

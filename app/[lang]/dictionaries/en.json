@@ -1,41 +1,33 @@
 {
   "siteConfig": {
     "title": "Alejandro Vidal - Frontend Developer",
-    "description": "Portfolio of Alejandro Vidal, a frontend developer specialized in React and Next.js."
-  },
-  "header": {
-    "experiences": "Experience",
-    "projects": "Projects",
-    "about": "About Me"
+    "description": "Frontend developer specialized in React and Next.js. I build modern and accessible web experiences."
   },
   "me": {
-    "title": "Hello, I'm Alejandro",
-    "subtitle": "Frontend Developer",
-    "description": "I build modern, accessible, and high-performance web experiences using React and Next.js.",
-    "downloadCV": "Download resume",
-    "contactMe": "Contact me"
+    "greeting": "I'm",
+    "name": "Alejandro",
+    "descriptionBeforeHighlight": "a",
+    "descriptionHighlight": "frontend",
+    "descriptionAfterHighlight": "developer with experience building modern, accessible, and high-performance web applications with React and Next.js.",
+    "cvText": "Download my CV",
+    "cvUrl": "/CV - Alejandro Vidal Sanchez.pdf"
+  },
+  "projects": {
+    "title": "Projects",
+    "omnistockDescription": "Inventory management platform for businesses of all sizes.",
+    "intolerantiaDescription": "AI-powered app to identify food intolerances.",
+    "myportfolioDescription": "Create your portfolio and resume using your GitHub account.",
+    "loopDescription": "Online store built with Next.js, Stripe, and Turso.",
+    "planetManagementSystemDescription": "A Star Wars-based planet management system."
   },
   "experiences": {
     "title": "Experience",
     "present": "Present",
-    "idealistaDescription": "I collaborated with the team to develop Idealista's new chat for non-professional users from scratch, enhancing both the system's user experience and scalability. I also contributed to the final phase of the chat redesign for professional users, ensuring high quality and optimal functionality. In addition, I designed and developed two reusable tools for both chat systems: an efficient media uploader and an integrated image gallery, improving content management and visualization. Throughout the project, I defined and managed tasks within the team to optimize workflow and coordination.",
-    "aktiosDescription": "Experience developing a variety of projects, ranging from web platforms to mobile applications. I contributed to an online ferry ticket sales platform that integrates multiple companies, allowing users to compare prices and choose the most affordable option, working closely with the tech lead on key architectural decisions to ensure scalability and maintainability. I've implemented authentication flows across multiple projects and completely rebuilt the backend of an application, covering everything from data modeling and architecture to final implementation. Additionally, I built a dashboard for visualizing electricity consumption through interactive charts and developed screens for a mobile application using Expo (React Native).",
-    "readMore": "Read more",
-    "readLess": "Read less"
-  },
-  "projects": {
-    "title": "Projects",
-    "omnistockDescription": "OmniStock is an inventory management platform designed for businesses of all sizes—from shops and workshops to libraries and rental services. It combines consumable stock control, loan management, traceability, and smart alerts into a single interface.",
-    "intolerantiaDescription": "A web app that uses AI to help users identify food intolerances based on their symptoms.IntolerantIA is an app where you will be able to take a quick look at the restaurant's menu to see what foods you can and cannot eat. Especially useful for people with allergies and intolerances.",
-    "myportfolioDescription": "MyPortfolio is a web application that allows developers and professionals in the technology sector to quickly and easily create their own portfolio and resume using their GitHub account to register.",
-    "loopDescription": "Online store created for practice using Next.js, Stripe, and Turso.",
-    "planetManagementSystemDescription": "A Star Wars–based Planet Management System built with Next.js and Zustand."
+    "idealistaDescription": "Built from scratch the new chat for non-professional users, reusable media upload tools and image gallery. Task management and team coordination.",
+    "aktiosDescription": "Development of web platforms and mobile applications. Ferry ticket sales platform, authentication flows, backend rebuilds, and interactive dashboards with React Native."
   },
   "aboutMe": {
-    "title": "About Me",
-    "text": "Hi, I’m Alejandro 👋. Besides being passionate about programming, I love staying active and enjoying the outdoors. You can usually find me skating, snowboarding, hitting the gym, or playing padel from time to time. I’m also a fan of video games, traveling, and mountain getaways, where I find the perfect mix of adventure and relaxation."
-  },
-  "footer": {
-    "rights": "All rights reserved."
+    "title": "About me",
+    "description": "When I'm not coding, I'm usually looking for ways to get moving, get outdoors, or disconnect from screens for a bit. I love skateboarding and snowboarding, hitting the gym, and playing padel from time to time. I also really enjoy video games, traveling, and escaping to the mountains."
   }
 }

@@ -13,9 +13,9 @@ export function ThemeSwitcher() {
 
   return (
     <Button
-      // size="icon"
-      variant="outline"
-      className="shadow-xs h-11 w-11"
+      size="icon"
+      variant="ghost"
+      className="h-9 w-9"
       onClick={toggleTheme}
     >
       <IconSun className="size-5 scale-100 rotate-0 transition-all dark:scale-0 dark:-rotate-90" />

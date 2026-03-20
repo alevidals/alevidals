@@ -1,17 +1,6 @@
-import {
-  IconChefHat,
-  IconExternalLink,
-  IconFileCv,
-  IconPackage,
-  IconPlanet,
-  IconShoppingBag,
-  IconSourceCode,
-  type ReactNode,
-} from "@tabler/icons-react";
+import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
 import Link from "next/link";
 import type { getDictionary } from "@/app/[lang]/dictionaries";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 
 type Props = {
   dict: Awaited<ReturnType<typeof getDictionary>>["projects"];
@@ -20,9 +9,8 @@ type Props = {
 type Project = {
   title: string;
   description: string;
-  link: string;
+  link?: string;
   repoUrl: string;
-  icon: ReactNode;
   technologies: string[];
 };
 
@@ -32,170 +20,87 @@ export function ProjectsSection({ dict }: Props) {
       title: "Omnistock",
       description: dict.omnistockDescription,
       link: "https://omnistock-chi.vercel.app",
-      icon: <IconPackage className="size-8 text-background" />,
       repoUrl: "https://github.com/alevidals/omnistock",
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Zod",
-        "Drizzle ORM",
-        "LibSQL",
-        "Better Auth",
-        "Framer Motion",
-        "Biome",
-        "Husky",
-      ],
+      technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
       title: "intolerantIA",
       description: dict.intolerantiaDescription,
       link: "https://intolerantia.vercel.app/",
       repoUrl: "https://github.com/alevidals/intolerantIA",
-      icon: <IconChefHat className="size-8 text-background" />,
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "ai-sdk",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Zustand",
-        "Zod",
-        "React Hook Form",
-        "Framer Motion",
-        "Biome",
-        "Lefthook",
-      ],
+      technologies: ["Next.js", "ai-sdk", "Tailwind CSS"],
     },
     {
       title: "MyPortfolio",
       description: dict.myportfolioDescription,
       link: "https://my-portfolio-five-kohl-50.vercel.app",
       repoUrl: "https://github.com/alevidals/my-portfolio",
-      icon: <IconFileCv className="size-8 text-background" />,
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Drizzle ORM",
-        "LibSQL",
-        "Better Fetch",
-        "Better Auth",
-        "SWR",
-        "Framer Motion",
-        "Zod",
-        "Biome",
-        "Lefthook",
-      ],
+      technologies: ["Next.js", "Drizzle ORM", "Better Auth"],
     },
     {
       title: "Loop",
       description: dict.loopDescription,
       link: "https://next-ecommerce-weld-omega.vercel.app/",
       repoUrl: "https://github.com/alevidals/loop",
-      icon: <IconShoppingBag className="size-8 text-background" />,
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Bcrypt",
-        "Jose",
-        "Zod",
-        "LibSQL",
-        "Stripe",
-        "Biome",
-        "Lefthook",
-      ],
+      technologies: ["Next.js", "Stripe", "LibSQL"],
     },
     {
       title: "Planet Management System",
       description: dict.planetManagementSystemDescription,
       link: "https://pms-codetest.vercel.app/",
       repoUrl: "https://github.com/alevidals/planet-management-system",
-      icon: <IconPlanet className="size-8 text-background" />,
-      technologies: [
-        "React",
-        "Next.js",
-        "TypeScript",
-        "Tailwind CSS",
-        "Shadcn UI",
-        "Zod",
-        "Biome",
-        "Lefthook",
-        "Vitest",
-        "Playwright",
-        "Zustand",
-        "React Hook Form",
-      ],
+      technologies: ["Next.js", "Zustand", "Playwright"],
     },
   ];
 
   return (
-    <section id="projects" className="mt-14 md:mt-32">
-      <div className="flex items-center gap-10">
-        <h3 className="text-3xl font-semibold leading-tight">{dict.title}</h3>
-      </div>
-      <div className="mt-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {PROJECTS.map((project) => (
-            <div
-              key={project.title}
-              className="p-6 rounded-lg flex flex-col border backdrop-blur-[2px]"
-            >
-              <div className="flex items-center justify-between mb-6">
-                <div className="p-2 bg-primary inline-flex rounded-md">
-                  {project.icon}
-                </div>
-                <div className="flex items-center gap-2">
-                  <Button
-                    variant="ghost"
-                    className="text-muted-foreground size-11"
-                    asChild
+    <section className="animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards duration-500 delay-100">
+      <h2 className="mb-6 text-lg font-semibold">{dict.title}</h2>
+      <div className="flex flex-col gap-3">
+        {PROJECTS.map((project) => (
+          <div
+            key={project.title}
+            className="group flex items-start gap-4 rounded-lg p-3 -mx-3 transition-colors duration-150 hover:bg-muted/50"
+          >
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2">
+                <h3 className="text-sm font-medium">{project.title}</h3>
+                {project.link && (
+                  <Link
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="opacity-0 transition-opacity duration-150 group-hover:opacity-60 hover:!opacity-100"
                   >
-                    <Link
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <IconExternalLink className="size-6" />
-                    </Link>
-                  </Button>
-                  <Button
-                    variant="ghost"
-                    className="text-muted-foreground size-11"
-                    asChild
-                  >
-                    <Link
-                      href={project.repoUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <IconSourceCode className="size-6" />
-                    </Link>
-                  </Button>
-                </div>
+                    <IconExternalLink className="size-3.5" />
+                  </Link>
+                )}
+                <Link
+                  href={project.repoUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="GitHub"
+                  className="opacity-0 transition-opacity duration-150 group-hover:opacity-60 hover:!opacity-100"
+                >
+                  <IconBrandGithub className="size-3.5" />
+                </Link>
               </div>
-              <h4 className="text-xl font-semibold">{project.title}</h4>
-              <p className="mt-4 text-muted-foreground text-md flex-1">
+              <p className="mt-0.5 text-sm text-muted-foreground">
                 {project.description}
               </p>
-              <div className="mt-6 flex flex-wrap gap-2">
+              <div className="mt-2 flex flex-wrap gap-1.5">
                 {project.technologies.map((tech) => (
-                  <Badge key={tech} variant="secondary">
+                  <span
+                    key={tech}
+                    className="inline-flex items-center rounded-md bg-secondary px-2 py-0.5 text-xs text-muted-foreground"
+                  >
                     {tech}
-                  </Badge>
+                  </span>
                 ))}
               </div>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </section>
   );

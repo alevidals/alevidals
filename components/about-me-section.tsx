@@ -1,40 +1,35 @@
 import Image from "next/image";
 import type { getDictionary } from "@/app/[lang]/dictionaries";
-import { GalleryCarousel } from "@/components/gallery-carousel";
 
 type Props = {
   dict: Awaited<ReturnType<typeof getDictionary>>["aboutMe"];
 };
 
-const images = Array.from({ length: 13 }, (_, i) => ({
-  id: i,
-  src: `/about/img${i + 1}.webp`,
-  alt: `Imagen ${i + 1}`,
-}));
+const PHOTOS = [
+  { src: "/about/img1.webp", alt: "Photo 1" },
+  { src: "/about/img3.webp", alt: "Photo 2" },
+  { src: "/about/img5.webp", alt: "Photo 3" },
+  { src: "/about/img7.webp", alt: "Photo 4" },
+  { src: "/about/img9.webp", alt: "Photo 5" },
+  { src: "/about/img11.webp", alt: "Photo 6" },
+];
 
 export function AboutMeSection({ dict }: Props) {
   return (
-    <section id="about" className="mt-14 md:mt-32">
-      <div className="flex items-center gap-10">
-        <h3 className="text-3xl font-semibold leading-tight">{dict.title}</h3>
-      </div>
-      <p className="mt-10 text-muted-foreground max-w-[80ch] text-lg">
-        {dict.text}
+    <section className="animate-in fade-in slide-in-from-bottom-4 fill-mode-backwards delay-300 duration-500">
+      <h2 className="mb-6 text-lg font-semibold">{dict.title}</h2>
+      <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
+        {dict.description}
       </p>
-
-      <div className="mt-10 sm:hidden">
-        <GalleryCarousel images={images} />
-      </div>
-
-      <div className="hidden sm:columns-2 md:columns-3 lg:columns-4 gap-4 mt-10 sm:block">
-        {images.map((img) => (
-          <div key={img.id} className="mb-4 break-inside-avoid">
+      <div className="grid grid-cols-2 gap-3 md:grid-cols-3">
+        {PHOTOS.map((photo) => (
+          <div key={photo.src} className="relative overflow-hidden rounded-xl">
             <Image
-              src={img.src}
-              alt={img.alt}
-              width={600}
-              height={800}
-              className="rounded-lg"
+              src={photo.src}
+              alt={photo.alt}
+              width={750}
+              height={1000}
+              className="h-full w-full object-cover"
             />
           </div>
         ))}

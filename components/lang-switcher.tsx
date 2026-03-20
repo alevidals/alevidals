@@ -23,11 +23,11 @@ export function LangSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="outline" className="h-11 w-11">
+        <Button variant="ghost" size="icon" className="h-9 w-9">
           {lang === "es" ? <EsFlag /> : <EnFlag />}
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align="start">
+      <DropdownMenuContent align="end">
         <DropdownMenuGroup>
           <DropdownMenuItem
             className="flex items-center justify-between"

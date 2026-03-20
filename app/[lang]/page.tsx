@@ -15,11 +15,11 @@ export default async function Home({ params }: Props) {
   const dict = await getDictionary(lang);
 
   return (
-    <main>
+    <div className="grid items-center gap-14 py-4 md:py-4">
       <MeSection dict={dict.me} />
-      <ExperiencesSection dict={dict.experiences} />
       <ProjectsSection dict={dict.projects} />
+      <ExperiencesSection dict={dict.experiences} />
       <AboutMeSection dict={dict.aboutMe} />
-    </main>
+    </div>
   );
 }
