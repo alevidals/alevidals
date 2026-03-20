@@ -4,13 +4,8 @@
     "description": "Desarrollador frontend especializado en React y Next.js. Construyo experiencias web modernas y accesibles."
   },
   "me": {
-    "greeting": "Soy",
-    "name": "Alejandro",
-    "descriptionBeforeHighlight": "desarrollador",
-    "descriptionHighlight": "frontend",
-    "descriptionAfterHighlight": "con experiencia construyendo aplicaciones web modernas, accesibles y de alto rendimiento con React y Next.js.",
-    "cvText": "Descarga mi CV",
-    "cvUrl": "/CV - Alejandro Vidal Sanchez.pdf"
+    "description": "Soy <span class='font-bold tracking-tight'>Alejandro</span>, <span class='font-semibold text-accent-blue'>frontend</span> con experiencia construyendo aplicaciones web modernas, accesibles y de alto rendimiento con React y Next.js.",
+    "cvText": "Descarga mi CV"
   },
   "projects": {
     "title": "Proyectos",

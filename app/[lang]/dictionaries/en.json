@@ -4,13 +4,8 @@
     "description": "Frontend developer specialized in React and Next.js. I build modern and accessible web experiences."
   },
   "me": {
-    "greeting": "I'm",
-    "name": "Alejandro",
-    "descriptionBeforeHighlight": "a",
-    "descriptionHighlight": "frontend",
-    "descriptionAfterHighlight": "developer with experience building modern, accessible, and high-performance web applications with React and Next.js.",
-    "cvText": "Download my CV",
-    "cvUrl": "/CV - Alejandro Vidal Sanchez.pdf"
+    "description": "I'm <span class='font-bold tracking-tight'>Alejandro</span>, a <span class='font-semibold text-accent-blue'>frontend</span> developer with experience building modern, accessible, and high-performance web applications with React and Next.js.",
+    "cvText": "Download my CV"
   },
   "projects": {
     "title": "Projects",

@@ -7,11 +7,11 @@ type Props = {
 
 const PHOTOS = [
   { src: "/about/img1.webp", alt: "Photo 1" },
-  { src: "/about/img3.webp", alt: "Photo 2" },
-  { src: "/about/img5.webp", alt: "Photo 3" },
-  { src: "/about/img7.webp", alt: "Photo 4" },
-  { src: "/about/img9.webp", alt: "Photo 5" },
-  { src: "/about/img11.webp", alt: "Photo 6" },
+  { src: "/about/img2.webp", alt: "Photo 2" },
+  { src: "/about/img3.webp", alt: "Photo 3" },
+  { src: "/about/img4.webp", alt: "Photo 4" },
+  { src: "/about/img5.webp", alt: "Photo 5" },
+  { src: "/about/img6.webp", alt: "Photo 6" },
 ];
 
 export function AboutMeSection({ dict }: Props) {
