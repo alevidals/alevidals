@@ -31,6 +31,9 @@ export async function generateMetadata({
   };
 
   return {
+    metadataBase: new URL(
+      process.env.NEXT_PUBLIC_SITE_URL ?? "http://localhost:3000",
+    ),
     title: dict.siteConfig.title,
     description: dict.siteConfig.description,
     keywords: [

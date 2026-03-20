@@ -9,17 +9,19 @@
   },
   "projects": {
     "title": "Projects",
-    "omnistockDescription": "Inventory management platform for businesses of all sizes.",
-    "intolerantiaDescription": "AI-powered app to identify food intolerances.",
-    "myportfolioDescription": "Create your portfolio and resume using your GitHub account.",
-    "loopDescription": "Online store built with Next.js, Stripe, and Turso.",
-    "planetManagementSystemDescription": "A Star Wars-based planet management system."
+    "omnistockDescription": "Platform for inventory management for businesses of all sizes. It integrates consumable stock control, loan management, traceability, and smart alerts in a single interface.",
+    "intolerantiaDescription": "Web application that uses artificial intelligence to help users identify food intolerances from restaurant menus.",
+    "myportfolioDescription": "MyPortfolio is a web application that allows developers and tech professionals to create their own portfolio and resume quickly and easily, using their GitHub account to sign up.",
+    "loopDescription": "Online store created for practice using Next.js, Stripe, and Turso.",
+    "planetManagementSystemDescription": "A Star Wars-based planet management system, built with Next.js and Zustand."
   },
   "experiences": {
     "title": "Experience",
     "present": "Present",
-    "idealistaDescription": "Built from scratch the new chat for non-professional users, reusable media upload tools and image gallery. Task management and team coordination.",
-    "aktiosDescription": "Development of web platforms and mobile applications. Ferry ticket sales platform, authentication flows, backend rebuilds, and interactive dashboards with React Native."
+    "idealistaDescription": "I collaborated with the team in building from scratch the new Idealista chat for non-professional users, improving both user experience and system scalability. I also participated in the final phase of the professional user chat renovation, ensuring high quality and optimal functionality. Additionally, I designed and developed two reusable tools for both chat systems: an efficient media uploader and an integrated image gallery, improving content management and visualization. Throughout the project, I defined and managed tasks within the team to optimize workflow and coordination.",
+    "aktiosDescription": "Experience developing a variety of projects, from web platforms to mobile applications. I contributed to an online ferry ticket sales platform that integrates multiple companies, allowing users to compare prices and choose the most economical option, working closely with the tech lead on key architecture decisions to ensure scalability and maintainability. I implemented authentication flows in various projects and completely rebuilt the backend of an application, covering everything from data modeling and architecture to final implementation. Additionally, I developed a dashboard to visualize electricity consumption through interactive charts and screens for a mobile application using Expo (React Native).",
+    "readMore": "Read more",
+    "readLess": "Read less"
   },
   "aboutMe": {
     "title": "About me",
