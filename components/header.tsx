@@ -45,6 +45,7 @@ export function Header() {
           alt="Alejandro Vidal"
           width={32}
           height={32}
+          loading="eager"
           className="rounded-full"
         />
         <span className="text-sm font-medium tracking-tight">alevidals</span>

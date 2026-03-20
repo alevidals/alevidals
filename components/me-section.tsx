@@ -4,7 +4,7 @@ type Props = {
   dict: Awaited<ReturnType<typeof getDictionary>>["me"];
 };
 
-const CV_URL = "/CV - Alejandro Vidal Sanchez.pdf";
+const CV_URL = encodeURI("/CV - Alejandro Vidal Sanchez.pdf");
 
 export async function MeSection({ dict }: Props) {
   return (
