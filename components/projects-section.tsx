@@ -1,5 +1,4 @@
 import { IconBrandGithub, IconExternalLink } from "@tabler/icons-react";
-import Link from "next/link";
 import type { getDictionary } from "@/app/[lang]/dictionaries";
 
 type Props = {
@@ -66,24 +65,24 @@ export function ProjectsSection({ dict }: Props) {
               <div className="flex items-center gap-2">
                 <h3 className="text-sm font-medium">{project.title}</h3>
                 {project.link && (
-                  <Link
+                  <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="opacity-0 transition-opacity duration-150 group-hover:opacity-60 hover:!opacity-100"
+                    className="opacity-60 transition-opacity duration-150 group-hover:opacity-60 hover:opacity-100"
                   >
                     <IconExternalLink className="size-3.5" />
-                  </Link>
+                  </a>
                 )}
-                <Link
+                <a
                   href={project.repoUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   title="GitHub"
-                  className="opacity-0 transition-opacity duration-150 group-hover:opacity-60 hover:!opacity-100"
+                  className="opacity-60 transition-opacity duration-150 group-hover:opacity-60 hover:opacity-100"
                 >
                   <IconBrandGithub className="size-3.5" />
-                </Link>
+                </a>
               </div>
               <p className="mt-0.5 text-sm text-muted-foreground">
                 {project.description}
