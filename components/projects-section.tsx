@@ -23,7 +23,14 @@ export function ProjectsSection({ dict }: Props) {
       technologies: ["Next.js", "TypeScript", "Tailwind CSS"],
     },
     {
-      title: "intolerantIA",
+      title: "IntolerantIA Expo (React Native)",
+      description: dict.intolerantiaDescription,
+      link: "https://expo.dev/@alevidals/intolerantia",
+      repoUrl: "https://github.com/alevidals/intolerantia-expo",
+      technologies: ["Expo", "React Native", "ai-sdk", "Tamagui", "TypeScript"],
+    },
+    {
+      title: "intolerantIA (Next.js)",
       description: dict.intolerantiaDescription,
       link: "https://intolerantia.vercel.app/",
       repoUrl: "https://github.com/alevidals/intolerantIA",
