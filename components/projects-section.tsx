@@ -25,7 +25,6 @@ export function ProjectsSection({ dict }: Props) {
     {
       title: "IntolerantIA Expo (React Native)",
       description: dict.intolerantiaDescription,
-      link: "https://expo.dev/@alevidals/intolerantia",
       repoUrl: "https://github.com/alevidals/intolerantia-expo",
       technologies: ["Expo", "React Native", "ai-sdk", "Tamagui", "TypeScript"],
     },
