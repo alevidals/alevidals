@@ -1,13 +1,15 @@
 <h1 style="border-bottom: none; margin-bottom:0px">Hey! I'm Alejandro 👋</h1>
 
 <p>
-I'm a software developer with over 4 years of coding experience, including 2+ years of professional work in web development. I'm always eager to learn and grow, and I'm open to new opportunities that allow me to expand my skills and knowledge.
+Frontend Engineer with over 6 years of experience building scalable and high-performance web applications. I’m focused on writing clean, maintainable code and continuously improving both user experience and developer experience. I’m always open to new opportunities that challenge me technically and help me keep growing.
 </p>
 
-<p>My primary stack includes React (with a focus on Next.js), Node.js, and TypeScript.</p>
+<p>
+My primary stack includes React (with a strong focus on Next.js), TypeScript, and Node.js, along with modern frontend tooling and practices.
+</p>
 
 <p>
-  While I have a strong preference for front-end development, I also enjoy working on the back-end, especially within the JavaScript ecosystem.
+While I specialize in frontend development, I also enjoy working on backend systems within the JavaScript ecosystem when needed, especially when it helps deliver better end-to-end products.
 </p>
 
 <h2 style="border-bottom: none;">📫 Contact</h2>
